@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+const {startServer} = require('../index')
+const throng = require('throng')
+throng({
+  workers: process.env.WEB_CONCURRENCY || 1,
+  lifetime: Infinity
+}, startServer)
