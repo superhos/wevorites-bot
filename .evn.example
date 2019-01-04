@@ -2,4 +2,4 @@ LOGIN_DATA_CACHE=./data/sync-data.json
 RECEPT_EMAIL=xxx@xx.com
 GITHUB_CLIENT_ID=APPLY_FROM_GITHUB
 WEB_SERVER=http://localhost:7001
-SENTRY_DSN=https://xxx@sentry.io/000
+SENTRY_DSN=https://xxx@sentry.io/0000
