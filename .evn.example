@@ -1,8 +1,4 @@
-LOGIN_DATA_CACHE=./data/sync-data.json
-MONGO_INITDB_URL=mongodb://127.0.0.1:27019
-MONGO_INITDB_DATABASE=wevorites
-MONGO_DATA_DIR=/data/db
-MONGO_TEST_DATA_DIR=/data/test_db
-MONGO_LOG_FILE=/var/log/mongodb/mongodb.log
+RECEPT_EMAIL=xxx@xx.com
 GITHUB_CLIENT_ID=APPLY_FROM_GITHUB
 WEB_SERVER=http://localhost:7001
+SENTRY_DSN=https://xxx@sentry.io/000

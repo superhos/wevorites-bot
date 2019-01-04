@@ -4,15 +4,12 @@ const path = require('path');
 global.appRoot = path.resolve(__dirname);
 
 async function startServer (id) {
+  const Sentry = require('@sentry/node')
   require('dotenv').config()
 
-  // const bugsnag = require('bugsnag')
-  // bugsnag.register(process.env.BUGSNAG_API_KEY)
-
-  // process.on('unhandledRejection', (error) => {
-  //   console.error(error.stack)
-  //   bugsnag.notify(error)
-  // })
+  if (process.env.SENTRY_DSN) {
+    Sentry.init({ dsn: process.env.SENTRY_DSN })
+  }
 
   log('STARTING APP..')
 
@@ -21,10 +18,11 @@ async function startServer (id) {
     loginDataCachePath: process.env.LOGIN_DATA_CACHE,
     dbURL: `${process.env.MONGO_INITDB_URL}/${process.env.MONGO_INITDB_DATABASE}`,
     githubClientId: process.env.GITHUB_CLIENT_ID,
-    webServer: process.env.WEB_SERVER
+    webServer: process.env.WEB_SERVER,
+    receptEmail: process.env.RECEPT_EMAIL
   })
   await server.start()
-  console.log(`Worker ${id} (pid: ${process.pid})`)
+  console.log(`Server is Running`)
   return server
 }
 
