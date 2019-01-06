@@ -19,7 +19,6 @@ async function startServer (id) {
   const Server = require('./lib/server')
   const server = new Server({
     loginDataCachePath: process.env.LOGIN_DATA_CACHE,
-    dbURL: `${process.env.MONGO_INITDB_URL}/${process.env.MONGO_INITDB_DATABASE}`,
     githubClientId: process.env.GITHUB_CLIENT_ID,
     webServer: process.env.WEB_SERVER
   })
