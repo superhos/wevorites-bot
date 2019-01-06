@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "node app.js",
-    "dev": "DEBUG=* node script/server"
+    "dev": "DEBUG=* node script/server",
+    "start": "node script/server"
   },
   "author": "Sevens <297495165@qq.com>",
   "license": "MIT",
