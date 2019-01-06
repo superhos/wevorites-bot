@@ -4,14 +4,17 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "node app.js"
+    "test": "node app.js",
+    "dev": "DEBUG=* node script/server"
   },
   "author": "Sevens <297495165@qq.com>",
   "license": "MIT",
   "dependencies": {
+    "@sentry/node": "^4.4.2",
     "cheerio": "^1.0.0-rc.2",
     "debug": "^4.1.1",
     "dotenv": "^6.2.0",
+    "nodemailer": "^5.0.0",
     "qrcode-terminal": "^0.12.0",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.5",
