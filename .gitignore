@@ -7,5 +7,8 @@ node_modules/*
 public/
 .deploy*/
 .history/
+.history/*
 data/*
 .env
+
+data/sync-data.json
